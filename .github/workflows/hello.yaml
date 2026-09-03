@@ -13,11 +13,7 @@ jobs:
         id: step1
         run: |
           foo=bar
-          echo "FOO=${foo}" >> "$GITHUB_ENV"
-
-      - name: step2
-        id: step2
-        run: echo $FOO
+          echo "FOO=${foo}" >> "$GITHUB_OUTPUT"
 
   job2:
     runs-on: ubuntu-22.04
