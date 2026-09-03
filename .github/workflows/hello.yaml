@@ -1,17 +1,17 @@
 name: "variable hops"
 
 on:
-  workflow-dispatch
+  workflow_dispatch:
 
 jobs:
-  - job1
+  job1
     runs-on: ubuntu-22.04
     steps:
       - name: first steps
         id: first-step
         run: |
           foo=bar
-          echo "FOO=${foo}" >> "$GITHIB_ENV"
+          echo "FOO=${foo}" >> "$GITHUB_ENV"
 
       - name: check
         run: echo $FOO
