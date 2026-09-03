@@ -5,6 +5,7 @@ on:
 
 jobs:
   job1:
+    runs-on: ubuntu-22.04
     steps:
       - name: step1
         id: step1
