@@ -6,6 +6,7 @@ on:
 jobs:
   job1:
     runs-on: ubuntu-22.04
+    outputs: ${{ steps.step1.outputs.foo  }}
     steps:
       - name: step1
         id: step1
@@ -22,4 +23,4 @@ jobs:
     steps:
       - name: step1
         run: |
-          echo $FOO
+          echo ${{  needs.job1.outputs.foo  }}
