@@ -4,9 +4,18 @@ on:
   workflow_dispatch:
 
 jobs:
-  hello-job:
+  job1:
     runs-on: ubuntu-22.04
     steps:
-      - run: echo hello
-      - run: print("hi")
-        shell: python
+      - run: step 1, workflow 1
+  job2:
+    runs-on: ubuntu-22.04
+    steps:
+      - run: step 2, workflow 2
+  job3:
+      runs-on: ubuntu-22.04
+      steps:
+        - run: echo need jobs1 and 2
+      needs:
+        - job1
+        - job2
