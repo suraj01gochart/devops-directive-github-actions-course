@@ -7,11 +7,11 @@ jobs:
   job1:
     runs-on: ubuntu-22.04
     steps:
-      - run: step 1, workflow 1
+      - run: echo step 1, workflow 1
   job2:
     runs-on: ubuntu-22.04
     steps:
-      - run: step 2, workflow 2
+      - run: echo step 2, workflow 2
   job3:
       runs-on: ubuntu-22.04
       steps:
